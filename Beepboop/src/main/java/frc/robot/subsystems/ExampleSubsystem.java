@@ -4,44 +4,21 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.Constants;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.RelativeEncoder;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class ExampleSubsystem extends SubsystemBase {
-  /** Creates a new ExampleSubsystem. */
-  public ExampleSubsystem() {}
+public class Drivetrain extends SubsystemBase 
+{
+  private final CANSparkMax m_flMotor = new CANSparkMax(3, MotorType.kBrushless);
+  private final CANSparkMax m_blMotor = new CANSparkMax(4, MotorType.kBrushless);
+  MotorControllerGroup m_left = new MotorController Group(m_fl, m_blMotor);
+  private final CANSparkMax m_frMotor = new CANSparkMax(1, MotorType.kBrushless);
+  private final CANSparkMax m_brMotor = new CANSparkMax(2, MotorType.kBrushless);
 
-  /**
-   * Example command factory method.
-   *
-   * @return a command
-   */
-  public CommandBase exampleMethodCommand() {
-    // Inline construction of command goes here.
-    // Subsystem::RunOnce implicitly requires `this` subsystem.
-    return runOnce(
-        () -> {
-          /* one-time action goes here */
-        });
-  }
-
-  /**
-   * An example method querying a boolean state of the subsystem (for example, a digital sensor).
-   *
-   * @return value of some boolean subsystem state, such as a digital sensor.
-   */
-  public boolean exampleCondition() {
-    // Query some boolean state, such as a digital sensor.
-    return false;
-  }
-
-  @Override
-  public void periodic() {
-    // This method will be called once per scheduler run
-  }
-
-  @Override
-  public void simulationPeriodic() {
-    // This method will be called once per scheduler run during simulation
-  }
+  
 }
