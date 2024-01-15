@@ -46,7 +46,7 @@ public void resetEncoders() {
 }
 
 public Drivetrain() {
-
+  
   m_flMotor.setIdleMode(IdleMode.kBrake);
   m_blMotor.setIdleMode(IdleMode.kBrake);
   m_frMotor.setIdleMode(IdleMode.kBrake);
@@ -60,10 +60,132 @@ public Drivetrain() {
   m_rightEncoder.setPositionConversionFactor(Constants.K_WHEEL_DIAMETER_INCH);
   m_leftBackEncoder.setPositionConversionFactor(Constants.K_WHEEL_DIAMETER_INCH);
   m_rightBackEncoder.setPositionConversionFactor(Constants.K_WHEEL_DIAMETER_INCH);
-
+  //^line 47( I think ).
   
 
   resetEncoders();
   }
 
+  public CANSparkMax getTestMotor() 
+  {
+    return m_brMotor;
+  }
+
+  public void runTest(double speed)
+  {
+    m_brMotor.set(speed);
+
+  }
+  
+  public void stopMotors()
+  {
+    m_diffDrive.arcadeDrive(0, 0);
+  }
+  public RelativeEncoder getLeftEncoder()
+  {
+    return m_leftEncoder;
+  }
+  public RelativeEncoder getRightEncoder()
+  {
+    return m_rightEncoder;
+  }
+  public RelativeEncoder getRightBEncoder()
+  {
+    return m_rightBackEncoder;
+  }
+  public RelativeEncoder getLeftBEncoder()
+  {
+    return m_leftBackEncoder;
+  }
+  public double getLeftDistanceInch()
+  {
+    return m_leftBackEncoder.getPosition();
+  }
+  public double getRightDistanceInch()
+  {
+    return m_rightEncoder.getPosition();
+  }
+  public double getRightBDistanceInch()
+  {
+    return m_rightBackEncoder.getPosition();
+  }
+  public double getLeftBDistanceInch()
+  {
+    return m_leftBackEncoder.getPosition();
+  }
+  //^line 47( I think ).
+
+
+
+  public CANSparkMax getTestMotor() 
+  {
+    return m_brMotor;
+  }
+
+  public void runTest(double speed)
+  {
+    m_brMotor.set(speed);
+
+  }
+  
+  public void stopMotors()
+  {
+    m_diffDrive.arcadeDrive(0, 0);
+  }
+  public RelativeEncoder getLeftEncoder()
+  {
+    return m_leftEncoder;
+  }
+  public RelativeEncoder getRightEncoder()
+  {
+    return m_rightEncoder;
+  }
+  public RelativeEncoder getRightBEncoder()
+  {
+    return m_rightBackEncoder;
+  }
+  public RelativeEncoder getLeftBEncoder()
+  {
+    return m_leftBackEncoder;
+  }
+  public double getLeftDistanceInch()
+  {
+    return m_leftBackEncoder.getPosition();
+  }
+  public double getRightDistanceInch()
+  {
+    return m_rightEncoder.getPosition();
+  }
+  public double getRightBDistanceInch()
+  {
+    return m_rightBackEncoder.getPosition();
+  }
+  public double getLeftBDistanceInch()
+  {
+    return m_leftBackEncoder.getPosition();
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
