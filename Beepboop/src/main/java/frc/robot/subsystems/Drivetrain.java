@@ -16,7 +16,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 
 
-public class Drivetrain {
+public class Drivetrain extends SubsystemBase{
   private final CANSparkMax m_flMotor = new CANSparkMax(3, MotorType.kBrushless);
 private final CANSparkMax m_blMotor = new CANSparkMax(4, MotorType.kBrushless);
 MotorControllerGroup m_left = new MotorControllerGroup(m_flMotor, m_blMotor);
