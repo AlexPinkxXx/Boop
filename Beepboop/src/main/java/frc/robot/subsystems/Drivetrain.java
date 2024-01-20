@@ -36,7 +36,7 @@ private final DifferentialDrive m_diffDrive = new DifferentialDrive(m_left, m_ri
 private double balancePosition;
 
 public void arcadeDrive(double fwd, double rot) {
-  m_diffDrive.arcadeDrive(fwd, rot);
+  m_diffDrive.arcadeDrive(fwd * 0.3, rot);
 }
 
 // public void resetEncoders() {
