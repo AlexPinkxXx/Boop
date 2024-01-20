@@ -75,6 +75,9 @@ public Drivetrain() {
   public void runTest(double speed)
   {
     m_brMotor.set(speed);
+    m_frMotor.set(speed);
+    m_blMotor.set(speed);
+    m_flMotor.set(speed);
 
   }
   
