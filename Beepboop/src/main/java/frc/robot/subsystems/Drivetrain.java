@@ -53,10 +53,12 @@ public Drivetrain() {
   // m_frMotor.setIdleMode(IdleMode.kBrake);
   // m_brMotor.setIdleMode(IdleMode.kBrake);
    // We need to invert one side of the drivetrain so that positive voltages result in both sides moving forward. Depending on how your robot's gearbox is constructed, you might have to invert the left side instead.
+  
   m_right.setInverted(true);
   m_left.setInverted(false);
-  m_brMotor.setInverted(true);
-  m_frMotor.setInverted(true);
+  //m_brMotor.setInverted(true);
+  //m_frMotor.setInverted(true);
+  
   // m_leftEncoder.setPositionConversionFactor(Constants.K_WHEEL_DIAMETER_INCH);
   // m_rightEncoder.setPositionConversionFactor(Constants.K_WHEEL_DIAMETER_INCH);
   // m_leftBackEncoder.setPositionConversionFactor(Constants.K_WHEEL_DIAMETER_INCH);
