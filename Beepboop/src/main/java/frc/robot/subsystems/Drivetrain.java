@@ -18,10 +18,10 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 
 public class Drivetrain extends SubsystemBase{
-  private final Spark m_flMotor = new Spark(0);
-private final Spark m_blMotor = new Spark(0);
+  private final Spark m_flMotor = new Spark(15);
+private final Spark m_blMotor = new Spark(2);
 MotorControllerGroup m_left = new MotorControllerGroup(m_flMotor, m_blMotor);
-private final Spark m_frMotor = new Spark(0);
+private final Spark m_frMotor = new Spark(14);
 private final Spark m_brMotor = new Spark(0);
 MotorControllerGroup m_right = new MotorControllerGroup(m_frMotor, m_brMotor);
 
