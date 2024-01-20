@@ -7,10 +7,9 @@ package frc.robot.commands;
 import frc.robot.subsystems.*;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
-
 /** An example command that uses an example subsystem. */
 public class move extends CommandBase {
-  @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
+  @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
   private double myDistance;
   private final Drivetrain m_subsystem;
 
@@ -28,19 +27,19 @@ public class move extends CommandBase {
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {}
+  public void initialize() {
+  }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-  m_subsystem.arcadeDrive(.5, 0);
+    m_subsystem.arcadeDrive(.5, 0);
 
   }
 
   // Called once the command ends or is interrupted.
   @Override
-  public void end(boolean interrupted) 
-  { 
+  public void end(boolean interrupted) {
     m_subsystem.arcadeDrive(0, 0);
   }
 
@@ -49,7 +48,7 @@ public class move extends CommandBase {
   public boolean isFinished() {
     // if (m_subsystem.getRightDistanceInch() >= myDistance)
     // {
-    //     return true;
+    // return true;
     // }
     return false;
   }
