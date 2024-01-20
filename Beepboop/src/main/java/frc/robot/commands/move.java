@@ -47,10 +47,10 @@ public class move extends CommandBase {
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
-    if (m_subsystem.getRightDistanceInch() >= myDistance)
-    {
-        return true;
-    }
+    // if (m_subsystem.getRightDistanceInch() >= myDistance)
+    // {
+    //     return true;
+    // }
     return false;
   }
 }
